@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Banyo Dolapları | İçin Yapı & Dekorasyon</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+
+            font-family: Arial, sans-serif;
+
+            color: white;
+
+            background:
+                linear-gradient(
+                    rgba(10, 7, 5, 0.88),
+                    rgba(10, 7, 5, 0.92)
+                ),
+                url("./images/banyo-arkaplan.png");
+
+            background-size: cover;
+
+            background-position: center;
+
+            background-attachment: fixed;
+        }
+
+
+        /* ÜST BAŞLIK */
+
+        .baslik {
+            text-align: center;
+
+            padding: 60px 20px 35px;
+        }
+
+        .baslik h1 {
+            font-size: 42px;
+
+            color: white;
+
+            margin-bottom: 15px;
+
+            letter-spacing: 2px;
+        }
+
+        .baslik h1 span {
+            color: #ff7200;
+        }
+
+        .baslik p {
+            font-size: 18px;
+
+            color: #dddddd;
+        }
+
+
+        /* ÜRÜN ALANI */
+
+        .urunler {
+
+            width: 90%;
+
+            max-width: 1200px;
+
+            margin: 0 auto 60px;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 30px;
+        }
+
+
+        /* ÜRÜN KARTI */
+
+        .urun {
+
+            background: rgba(15, 15, 15, 0.88);
+
+            border: 1px solid #ff7200;
+
+            border-radius: 15px;
+
+            padding: 18px;
+
+            transition: 0.3s;
+
+            overflow: hidden;
+        }
+
+        .urun:hover {
+
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 0 25px rgba(255, 114, 0, 0.35);
+        }
+
+
+        /* ÜRÜN FOTOĞRAFI */
+
+        .urun img {
+
+            width: 100%;
+
+            height: 350px;
+
+            object-fit: cover;
+
+            display: block;
+
+            border-radius: 10px;
+
+            margin-bottom: 18px;
+        }
+
+
+        /* ÜRÜN BAŞLIĞI */
+
+        .urun h2 {
+
+            color: #ff7200;
+
+            font-size: 24px;
+
+            margin-bottom: 10px;
+        }
+
+
+        /* ÜRÜN AÇIKLAMASI */
+
+        .urun p {
+
+            color: #eeeeee;
+
+            font-size: 16px;
+
+            line-height: 1.6;
+        }
+
+
+        /* TELEFON */
+
+        @media (max-width: 700px) {
+
+            .urunler {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .baslik h1 {
+
+                font-size: 32px;
+
+            }
+
+            .urun img {
+
+                height: 280px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- BAŞLIK -->
+
+    <header class="baslik">
+
+        <h1>
+            Banyo <span>Dolapları</span>
+        </h1>
+
+        <p>
+            Modern tasarım, kaliteli işçilik ve yaşam alanlarınıza uygun banyo çözümleri.
+        </p>
+
+    </header>
+
+
+    <!-- ÜRÜNLER -->
+
+    <section class="urunler">
+
+
+        <!-- MODEL 1 -->
+
+        <div class="urun">
+
+            <img
+                src="./images/bodrum80.png"
+                alt="Banyo Dolabı Model 1"
+            >
+
+            <h2>
+                Bodrum 80 cm Kül Gri Banyo Dolabı
+                31.500 TL
+            </h2>
+
+            <p>
+                Bodrum 80 cm Kül Gri Banyo Dolabı
+                31.500 TL
+            </p>
+
+        </div>
+
+
+        <!-- MODEL 2 -->
+
+        <div class="urun">
+
+            <img
+                src="./images/mina50.jpg"
+                alt="Banyo Dolabı Model 2"
+            >
+
+            <h2>
+                Mina 50cm MDF Banyo Dolabı Beyaz
+                9.800TL
+            </h2>
+
+            <p>
+               Mina 50cm MDF Banyo Dolabı Beyaz
+                9.800TL
+
+        </div>
+
+
+        <!-- MODEL 3 -->
+
+        <div class="urun">
+
+            <img
+                src="./images/astra50.jpg"
+                alt="Banyo Dolabı Model 3"
+            >
+
+            <h2>
+                Astra 50cm MDF Banyo Dolabı Beyaz
+                10.100 TL
+            </h2>
+
+            <p>
+Astra 50cm MDF Banyo Dolabı Beyaz
+                10.100 TL            </p>
+
+        </div>
+
+
+        <!-- MODEL 4 -->
+
+        <div class="urun">
+
+            <img
+                src="./images/koza80.jpg"
+                alt="Banyo Dolabı Model 4"
+            >
+
+            <h2>
+                Banyo Dolabı Model 4
+            </h2>
+
+            <p>
+               Koza 80cm MDF Banyo Dolabı Beyaz
+               14.000 TL
+            </p>
+
+        </div>
+
+
+    </section>
+
+
+</body>
+
+</html>
