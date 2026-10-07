@@ -1,0 +1,418 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+
+/* =========================
+   ANA SAYFA
+========================= */
+
+.hero {
+    width: 100vw;
+    height: 100vh;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background-image: url("images/icinarkaplan.png");
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+
+/* =========================
+   ALT BUTONLAR
+========================= */
+
+.menu {
+    position: absolute;
+
+    left: 50%;
+    bottom: 20px;
+
+    transform: translateX(-50%);
+
+    width: calc(100% - 80px);
+    max-width: 1660px;
+
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+
+    gap: 14px;
+
+    z-index: 10;
+}
+
+
+/* =========================
+   BUTON
+========================= */
+
+.button {
+    height: 110px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    color: white;
+    text-decoration: none;
+
+    background: rgba(15, 15, 15, 0.88);
+
+    border: 1px solid #e87527;
+
+    border-radius: 14px;
+
+    backdrop-filter: blur(5px);
+
+    font-size: 16px;
+
+    transition: 0.3s ease;
+}
+
+
+/* İKON */
+
+.button span {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 2px solid #e87527;
+
+    border-radius: 50%;
+
+    color: #e87527;
+
+    font-size: 21px;
+}
+
+
+/* HOVER */
+
+.button:hover {
+    transform: translateY(-5px);
+
+    background: rgba(232, 117, 39, 0.25);
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+
+.button:hover span {
+    background: #e87527;
+
+    color: white;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+    .menu {
+        width: calc(100% - 40px);
+
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+}
+
+
+/* =========================
+   TELEFON
+========================= */
+
+@media (max-width: 600px) {
+
+    .hero {
+        background-position: center center;
+    }
+
+    .menu {
+        width: calc(100% - 20px);
+
+        bottom: 10px;
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 7px;
+    }
+
+    .button {
+        height: 80px;
+
+        font-size: 13px;
+
+        gap: 6px;
+    }
+
+    .button span {
+        width: 32px;
+        height: 32px;
+
+        font-size: 16px;
+    }
+
+}/* =========================
+   İÇ SAYFALAR
+========================= */
+
+.services-page {
+
+    min-height: 100vh;
+
+    color: white;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.65),
+            rgba(0, 0, 0, 0.78)
+        ),
+        url("images/hizmetlerimiz.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+
+}
+
+
+/* ÜST BAR */
+
+.page-header {
+
+    height: 100px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 15px 50px;
+
+    border-bottom: 1px solid rgba(232, 117, 39, 0.4);
+
+    background: rgba(10, 10, 10, 0.75);
+
+    backdrop-filter: blur(8px);
+}
+
+
+/* LOGO */
+
+.logo-link img {
+
+    width: 75px;
+
+    height: 75px;
+
+    object-fit: contain;
+}
+
+
+/* ANA SAYFA BUTONU */
+
+.home-button {
+
+    padding: 12px 25px;
+
+    color: white;
+
+    text-decoration: none;
+
+    border: 1px solid #e87527;
+
+    border-radius: 8px;
+
+    transition: 0.3s;
+}
+
+
+.home-button:hover {
+
+    background: #e87527;
+
+}
+
+
+/* HAKKIMIZDA */
+
+.about {
+
+    width: 90%;
+
+    max-width: 1000px;
+
+    margin: 70px auto;
+
+}
+
+
+.about h1 {
+
+    text-align: center;
+
+    font-size: 48px;
+
+    margin-bottom: 50px;
+
+    color: #ffffff;
+
+}
+
+
+.about-content {
+
+    padding: 45px;
+
+    background: rgba(15, 15, 15, 0.88);
+
+    border: 1px solid rgba(232, 117, 39, 0.5);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 15px 50px rgba(0, 0, 0, 0.4);
+}
+
+
+.about-content h2 {
+
+    color: #e87527;
+
+    font-size: 30px;
+
+    margin-bottom: 25px;
+}
+
+
+.about-content h3 {
+
+    color: #e87527;
+
+    font-size: 24px;
+
+    margin-top: 35px;
+
+    margin-bottom: 15px;
+}
+
+
+.about-content p {
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    color: #eeeeee;
+
+    margin-bottom: 18px;
+}
+
+
+/* TELEFON */
+
+@media (max-width: 600px) {
+
+    .page-header {
+
+        height: 80px;
+
+        padding: 10px 20px;
+
+    }
+
+
+    .logo-link img {
+
+        width: 55px;
+
+        height: 55px;
+
+    }
+
+
+    .home-button {
+
+        padding: 9px 15px;
+
+        font-size: 14px;
+
+    }
+
+
+    .about {
+
+        width: 92%;
+
+        margin: 40px auto;
+
+    }
+
+
+    .about h1 {
+
+        font-size: 34px;
+
+        margin-bottom: 30px;
+
+    }
+
+
+    .about-content {
+
+        padding: 25px;
+
+    }
+
+
+    .about-content h2 {
+
+        font-size: 24px;
+
+    }
+
+
+    .about-content p {
+
+        font-size: 16px;
+
+    }
+
+}
